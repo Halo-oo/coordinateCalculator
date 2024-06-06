@@ -13,6 +13,8 @@ public class Main {
         while (continueStatus) {
             // 1) 좌표값 입력받기
             String coordinate = inputView.getCoordinateInput();
+            inputView.parseCoordinateString(coordinate);
+
 
             continueStatus = false;
         }
