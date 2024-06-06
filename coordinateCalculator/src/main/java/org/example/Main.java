@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.view.InputView;
+
 import java.io.IOException;
 
 public class Main {
