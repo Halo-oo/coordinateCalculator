@@ -19,6 +19,9 @@ public class ShapeCalculatorProvider {
         shapeCalculatorActions.put(ShapeType.RECTANGLE, shapeCalculatorRectangle);
     }
 
+    /**
+     * 주어진 좌표 개수에 따른 계산 함수 반환
+     */
     public ShapeCalculator getShapeCalculator(int coordinateCnt) {
         ShapeType shapeType = ShapeType.parseIntToShapeType(coordinateCnt);
         return shapeCalculatorActions.get(shapeType);
