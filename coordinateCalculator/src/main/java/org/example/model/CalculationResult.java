@@ -1,5 +1,8 @@
 package org.example.model;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class CalculationResult {
     /* 모양 종류 */
     String shapeType;
@@ -20,6 +23,7 @@ public class CalculationResult {
     }
 
     public void setCalculatorResult(double calculatorResult) {
-        this.calculatorResult = calculatorResult;
+        BigDecimal bdResult = new BigDecimal(calculatorResult).setScale(6, RoundingMode.HALF_UP);
+        this.calculatorResult = bdResult.doubleValue();
     }
 }
