@@ -8,7 +8,15 @@ public class ShapeCalculatorTwoDots implements ShapeCalculator {
 
     @Override
     public double calculationShape(List<Point> coordinateList) {
-        System.out.println("## 두 점 사이의 거리 구하기");
-        return 0;
+        return calculatingDistanceTwoPoints(coordinateList.get(0), coordinateList.get(1));
+    }
+
+    /**
+     * 두 점 사이의 거리 계산
+     */
+    public double calculatingDistanceTwoPoints(Point firstPoint, Point secondPoint) {
+        double X = Math.pow(firstPoint.getX() - secondPoint.getX(), 2);
+        double Y = Math.pow(firstPoint.getY() - secondPoint.getY(), 2);
+        return Math.sqrt(X + Y);
     }
 }
