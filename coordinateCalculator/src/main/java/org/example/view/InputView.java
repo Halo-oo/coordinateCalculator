@@ -35,4 +35,15 @@ public class InputView {
 
         return coordinateList;
     }
+
+    /**
+     * 게임 진행 여부 입력받기
+     */
+    public boolean askContinue() throws IOException {
+        System.out.println("계속 하시겠습니까? (yes/no)");
+        String status = br.readLine();
+
+        if (status.equals("no")) return false;
+        return true;
+    }
 }
