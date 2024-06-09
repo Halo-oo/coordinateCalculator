@@ -19,7 +19,7 @@ public class ShapeCalculatorTriangle implements ShapeCalculator {
     }
 
     /**
-     * 삼각형 넓이 계산
+     * 삼각형 넓이 계산 (refer. 헤론의 공식)
      */
     public double calculatingTriangleArea(Point firstPoint, Point secondPoint, Point thirdPoint) {
         Point point = firstPoint;
