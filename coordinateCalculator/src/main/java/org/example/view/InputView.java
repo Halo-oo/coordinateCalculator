@@ -15,6 +15,7 @@ public class InputView {
      * 좌표값 입력받기
      */
     public String getCoordinateInput() throws IOException {
+        System.out.println();
         System.out.println("좌표를 입력하세요.");
         return br.readLine();
     }

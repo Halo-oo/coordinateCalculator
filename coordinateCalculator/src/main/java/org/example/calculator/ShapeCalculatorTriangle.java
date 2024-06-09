@@ -21,13 +21,13 @@ public class ShapeCalculatorTriangle implements ShapeCalculator {
     /**
      * 삼각형 넓이 계산 (refer. 헤론의 공식)
      */
-    public double calculatingTriangleArea(Point firstPoint, Point secondPoint, Point thirdPoint) {
-        Point point = firstPoint;
+    public double calculatingTriangleArea(Point p1, Point p2, Point p3) {
+        Point point = p1;
 
         // 세 변의 길이 계산
-        double aSideLength = point.calculatingDistanceTwoPoints(firstPoint, secondPoint);
-        double bSideLength = point.calculatingDistanceTwoPoints(secondPoint, thirdPoint);
-        double cSideLength = point.calculatingDistanceTwoPoints(thirdPoint, firstPoint);
+        double aSideLength = point.calculatingDistanceTwoPoints(p1, p2);
+        double bSideLength = point.calculatingDistanceTwoPoints(p2, p3);
+        double cSideLength = point.calculatingDistanceTwoPoints(p3, p1);
 
         // 삼각형 넓이
         double halfCircumference = (aSideLength + bSideLength + cSideLength) / 2;

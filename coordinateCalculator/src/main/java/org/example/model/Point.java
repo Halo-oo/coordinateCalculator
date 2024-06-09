@@ -40,9 +40,9 @@ public class Point {
     }
 
     /* 두 좌표(Point)에 대한 거리 계산 */
-    public double calculatingDistanceTwoPoints(Point firstPoint, Point secondPoint) {
-        double X = Math.pow(firstPoint.getX() - secondPoint.getX(), 2);
-        double Y = Math.pow(firstPoint.getY() - secondPoint.getY(), 2);
+    public double calculatingDistanceTwoPoints(Point p1, Point p2) {
+        double X = Math.pow(p1.getX() - p2.getX(), 2);
+        double Y = Math.pow(p1.getY() - p2.getY(), 2);
 
         return Math.sqrt(X + Y);
     }
