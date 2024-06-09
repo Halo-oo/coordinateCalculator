@@ -15,18 +15,10 @@ public class ShapeCalculatorTwoDots implements ShapeCalculator {
         CalculationResult calculationResult = new CalculationResult();
         calculationResult.setShapeType("두 점 사이의 거리");
 
-        double result = calculatingDistanceTwoPoints(coordinateList.get(0), coordinateList.get(1));
+        Point point = coordinateList.get(0);
+        double result = point.calculatingDistanceTwoPoints(coordinateList.get(0), coordinateList.get(1));
         calculationResult.setCalculatorResult(result);
 
         return calculationResult;
-    }
-
-    /**
-     * 두 점 사이의 거리 계산
-     */
-    public double calculatingDistanceTwoPoints(Point firstPoint, Point secondPoint) {
-        double X = Math.pow(firstPoint.getX() - secondPoint.getX(), 2);
-        double Y = Math.pow(firstPoint.getY() - secondPoint.getY(), 2);
-        return Math.sqrt(X + Y);
     }
 }

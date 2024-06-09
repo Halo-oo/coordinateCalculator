@@ -14,6 +14,7 @@ public class Point {
         int intX = Integer.parseInt(x);
         int intY = Integer.parseInt(y);
 
+        /* (validation) 입력한 좌표의 범위 유효성 확인 */
         if (notAllowedRangeCheck(intX) || notAllowedRangeCheck(intY)) {
             ResultView resultView = new ResultView();
             resultView.warningMessageOutput(NOT_ALLOWED_RANGE_ERROR_MSG);
@@ -33,7 +34,16 @@ public class Point {
         return y;
     }
 
+    /* 좌표 값에 대한 최소 ↔️ 최대 범위 확인 */
     public boolean notAllowedRangeCheck(int coordinate) {
         return MIN_COORDINATE_VALUE > coordinate || coordinate > MAX_COORDINATE_VALUE;
+    }
+
+    /* 두 좌표(Point)에 대한 거리 계산 */
+    public double calculatingDistanceTwoPoints(Point firstPoint, Point secondPoint) {
+        double X = Math.pow(firstPoint.getX() - secondPoint.getX(), 2);
+        double Y = Math.pow(firstPoint.getY() - secondPoint.getY(), 2);
+
+        return Math.sqrt(X + Y);
     }
 }
